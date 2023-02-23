@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Homepage</title>
+	<link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+	<!---Header--->
+	<header>
+		<div class="container">
+			<nav class="navbar">
+				<img src="assets/logo.jpg" class="logo" width="40" height="40">
+
+				<div class="home"><a href="index.html">Home</a></div>
+				<div class="profile"><a href="profile.html">Our Profile</a></div>
+				<div class="portofolio">Portofolio</div>
+				<div class="message">Message Us</div>
+			</nav>
+		</div>
+	</header>
+
+	<!---Main Content--->
+	<main>
+		
+		<!---Hero--->
+		<section id="hero">
+			<div class="container">
+				<div class="hero">
+						<div class="slider">
+							<img class="img-slideshow" src="assets/hero1.jpg" alt="hero image 1">
+							<img class="img-slideshow" src="assets/hero2.jpg" alt="hero image 2">
+							<img class="img-slideshow" src="assets/hero3.jpg" alt="hero image 3">
+						</div>
+
+						<script type="text/javascript">
+							var slideIndex = 1
+							showDivs(slideIndex);
+
+							function plusDivs(n) {
+								showDivs((slideIndex += n));
+							}
+
+							function showDivs(n){
+								var i;
+								var imgList = document.getElementsByClassName("img-slideshow");
+								if (n > imgList.length) slideIndex = 1;
+								else if (n < 1) slideIndex = imgList.length;
+
+								for (i = 0; i < imgList.length; i++){
+									imgList[i].style.display = 'none';
+								}
+
+								imgList[slideIndex - 1].style.display = 'block';
+
+							}
+
+							setInterval(() => {
+								plusDivs(1);
+							}, 2000);
+
+						</script>
+				</div>	
+			</div>
+		</section>
+
+		<section id="pv">
+			<div class="container">
+				<div class="pv" style="display: flex; flex-direction: row;">
+					<div class="cprofile" style="display: flex; flex-direction: column; flex: 1;">
+						<h3>Profile Company</h3>
+						<br>
+						<p>Blue Vinyl (블루바이닐) is a record label founded by South Korean singer Baek Yerin (백예린). The label was founded on November 6th, 2019, and currently houses Baek Yerin, Cloud, and The Volunteers.</p>
+					</div>
+
+					<div class="vision" style="display: flex; flex: 3; flex-direction: column; align-content: center; justify-content: center;">
+						<h3>Vision</h3>
+						To create a good music.
+
+						<h3>Mission</h3>
+						- Making a good music.<br>
+						- Serving a good performance for all of the fans around the world.
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!---Artists--->
+		<section id="artist">
+			<div class="container">
+				<div class="artist">
+					<h1 class="artist-title">Artists</h1>
+					<div class="artist-gallery">
+						<div class="artist-img">
+							<img class="art-img" src="assets/art1.jpg" alt="">
+							<p id="art">Baek Yerin</p>
+						</div>
+						<div class="art-img">
+							<img class="art-img" src="assets/art2.jpg" alt="">
+							<p id="art">The Volunteers</p>
+						</div>
+						<div class="art-img">
+							<img class="art-img" src="assets/art3.jpg" alt="">
+							<p id="art">Cloud</p>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</section>
+		
+	</main>
+
+	<!---Footer--->
+	<footer>
+		<div class="container">
+			<div class="footer">
+				<p class="footer-p">Created by Rizka</p> 
+			</div> 
+		</div>
+	</footer>
+</body>
+</html>
